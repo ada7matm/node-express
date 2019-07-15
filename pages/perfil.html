@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Perfil</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.5/css/mdb.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/home.css">
+</head>
+
+<body>
+  <header class="h-50">
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg purple darken-1 navbar-dark fixed-top scrolling-navbar">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
+          aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+          <ul class="navbar-nav w-100">
+            <li class="nav-item">
+              <a class="nav-link" href="busquedas.html">Búsquedas</a>
+            </li>
+            <li class="nav-item mr-auto">
+              <a class="nav-link" href="ofertas.html">Ofertas</a>
+            </li>
+            <li class="nav-item float-right">
+              <a class="nav-link" href="perfil.html">Mi perfil</a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+    <!-- Full Page Intro -->
+    <div class="view h-100">
+      <!-- Mask & flexbox options-->
+      <div class="mask night-fade-gradient align-items-center">
+        <!-- Content -->
+        <div class="container h-100">
+          <!--Grid row-->
+          <div class="row h-100">
+            <!--Grid column-->
+            <div class="col-md-12 mb-4 white-text text-center d-flex flex-column justify-content-center">
+              <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-0 pt-md-5 pt-5 wow fadeInDown"
+                data-wow-delay="0.3s"><strong id="nombre-usuario">Ada Lovelace</strong></h1>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </div>
+        <!-- Content -->
+      </div>
+      <!-- Mask & flexbox options-->
+    </div>
+    <!-- Full Page Intro -->
+  </header>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-12">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+              aria-selected="true">Búsquedas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="ofertas-tab-tab" data-toggle="tab" href="#ofertas-tab" role="tab"
+              aria-controls="ofertas-tab" aria-selected="false">Ofertas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+              aria-selected="false">Info</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="container mt-5 mb-5">
+              <div class="row">
+
+
+
+                <!-- Editable table -->
+                <div class="card col-12 p-0">
+                  <h3 class="card-header w-100 text-center font-weight-bold text-uppercase py-4">Mis búsquedas</h3>
+                  <div class="card-body">
+                    <div id="table" class="table-editable w-100">
+                      <span class="table-add float-right mb-3 mr-2"><a href="#!" class="text-success"><i
+                            class="fas fa-plus fa-2x" aria-hidden="true" data-toggle="modal"
+                            data-target="#modalLoginForm" id="agregar-busqueda"></i></a></span>
+                      <table class="table table-bordered table-responsive-md table-striped text-center">
+                        <thead>
+                          <tr>
+                            <th class="text-center" width="20%">Categoría</th>
+                            <th class="text-center" width="50%">Descripción</th>
+                            <th class="text-center" width="15%">Editar</th>
+                            <th class="text-center" width="15%">Eliminar</th>
+                          </tr>
+                        </thead>
+                        <tbody id="busquedas">
+                          <tr class="busqueda-modelo">
+                            <td class="pt-3-half">Plomería</td>
+                            <td class="pt-3-half">Se me rompió un caño</td>
+                            <td class="pt-3-half">
+                              <span class="table-remove"><button type="button"
+                                  class="btn btn-primary btn-rounded btn-sm my-0" data-toggle="modal"
+                                  data-target="#modalLoginForm" id="editar-busqueda">Editar</button></span>
+                            </td>
+                            <td>
+                              <span class="table-remove"><button type="button"
+                                  class="btn btn-danger btn-rounded btn-sm my-0">Eliminar</button></span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <!-- Editable table -->
+
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="ofertas-tab" role="tabpanel" aria-labelledby="ofertas-tab">
+            <div class="container mt-5 mb-5">
+              <div class="row">
+
+
+
+                <!-- Editable table -->
+                <div class="card col-12 p-0">
+                  <h3 class="card-header w-100 text-center font-weight-bold text-uppercase py-4">Mis ofertas</h3>
+                  <div class="card-body">
+                    <div id="table" class="table-editable w-100">
+                      <span class="table-add float-right mb-3 mr-2"><a href="#!" class="text-success"><i
+                            class="fas fa-plus fa-2x" aria-hidden="true" data-toggle="modal"
+                            data-target="#modalLoginForm" id="agregar-oferta"></i></a></span>
+                      <table class="table table-bordered table-responsive-md table-striped text-center">
+                        <thead>
+                          <tr>
+                            <th class="text-center" width="20%">Categoría</th>
+                            <th class="text-center" width="50%">Descripción</th>
+                            <th class="text-center" width="15%">Editar</th>
+                            <th class="text-center" width="15%">Eliminar</th>
+                          </tr>
+                        </thead>
+                        <tbody id="ofertas">
+                          <tr class="oferta-modelo">
+                            <td class="pt-3-half">Plomería</td>
+                            <td class="pt-3-half">Se me rompió un caño</td>
+                            <td class="pt-3-half">
+                              <span class="table-remove"><button type="button"
+                                  class="btn btn-primary btn-rounded btn-sm my-0" data-toggle="modal"
+                                  data-target="#modalLoginForm" id="editar-oferta">Editar</button></span>
+                            </td>
+                            <td>
+                              <span class="table-remove"><button type="button"
+                                  class="btn btn-danger btn-rounded btn-sm my-0">Eliminar</button></span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <!-- Editable table -->
+
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+            <div class="container">
+              <div class="row">
+                <div class="col-12 offset-0 col-md-8 offset-md-2">
+                  <form class="card-body mx-4 mt-4" id="signup-form">
+                    <div class="alert alert-success d-none" role="alert" id="error-msg">
+                      Datos actualizados exitosamente.
+                    </div>
+                    <div class="alert alert-danger d-none" role="alert" id="error-msg">
+                      Hubo un problema. Inténtelo nuevamente.
+                    </div>
+                    <!--Body-->
+                    <div class="md-form">
+                      <input type="email" id="firstname-input" class="form-control" required>
+                      <label for="firstname-input">Nombre</label>
+                    </div>
+                    <div class="md-form">
+                      <input type="text" id="lastname-input" class="form-control" required>
+                      <label for="Form-email3">Apellido</label>
+                    </div>
+                    <div class="md-form">
+                      <input type="email" id="email-input" class="form-control" required>
+                      <label for="email-input">Email</label>
+                    </div>
+                    <div class="md-form">
+                      <input type="password" id="password-input" class="form-control" required>
+                      <label for="password-input">Contraseña</label>
+
+                    </div>
+
+                    <!--Grid row-->
+                    <div class="row d-flex align-items-center mb-4">
+
+                      <!--Grid column-->
+                      <div class="col-md-1 col-md-5 d-flex align-items-start mt-4">
+                        <div class="text-center">
+                          <button type="submit" class="btn btn-primary btn-rounded z-depth-1a">Editar</button>
+                        </div>
+                      </div>
+                      <!--Grid column-->
+
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h4 class="modal-title w-100 font-weight-bold" id="titulo-modal">Oferta</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body mx-3">
+          <div class="md-form mb-5">
+            <select class="browser-default custom-select" id="categoria-select">
+              <option selected disabled>Categoría</option>
+            </select>
+          </div>
+
+          <div class="md-form mb-4">
+            <textarea id="descripcion-input" class="md-textarea form-control" rows="3"></textarea>
+            <label for="descripcion-input">Descripción</label>
+          </div>
+
+        </div>
+        <div class="modal-footer d-flex justify-content-center">
+          <button class="btn btn-default" id="boton-modal">Agregar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.5/js/mdb.min.js"></script>
+  <script src="../scripts/perfil.js"></script>
+  <script src="../completar/perfil.js"></script>
+</body>
+
+</html>
