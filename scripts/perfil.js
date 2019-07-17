@@ -88,4 +88,7 @@ const actualizarCategorias = categorias => {
     }
 }
 
+const ocultarModal = () => {
+    $('#modalLoginForm').modal('hide');
+}
 
